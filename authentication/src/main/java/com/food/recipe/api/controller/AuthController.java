@@ -1,51 +1,35 @@
 package com.food.recipe.api.controller;
 
-import com.food.recipe.api.dto.AuthRequest;
-import com.food.recipe.api.model.response.JwtResponse;
-import com.food.recipe.api.entity.UserCredential;
 import com.food.recipe.api.model.request.AuthLoginRequest;
-import com.food.recipe.api.service.AuthService;
+import com.food.recipe.api.model.RestResponse;
+import com.food.recipe.api.model.request.RegisterRequest;
+import com.food.recipe.api.service.auth.AuthService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 public class AuthController {
 
-    private final AuthService service;
+    private final AuthService authService;
 
+    @PostMapping("/v1/register")
+    public ResponseEntity<RestResponse<Boolean>> registerUser(@RequestBody RegisterRequest registerRequest) {
 
-    private final AuthenticationManager authenticationManager;
-
-
-
-    @PostMapping("/register")
-    public String addNewUser(@RequestBody UserCredential user) {
-        return service.saveUser(user);
+        return ResponseEntity.ok(new RestResponse<>(200, authService.registerUser(registerRequest)));
     }
 
-    @PostMapping("/token")
-    public String getToken(@RequestBody AuthRequest authRequest) {
-        Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
-        if (authenticate.isAuthenticated()) {
-            return service.generateToken(authRequest.getUsername());
-        } else {
-            throw new RuntimeException("invalid access");
-        }
+    @PostMapping(value = "/v1/login")
+    public ResponseEntity<?> login(@RequestBody AuthLoginRequest authRequest) {
+
+        return ResponseEntity.ok(new RestResponse<>(200, authService.login(authRequest)));
     }
 
-    @PostMapping(value = "/login")
-    public JwtResponse login(@RequestBody AuthLoginRequest authRequest) {
-
-        return service.login(authRequest);
-    }
-
-    @GetMapping("/validate")
+    @GetMapping("/v1/validate")
     public String validateToken() {
         return "Token is valid";
     }
+
 }

@@ -4,68 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4853cab-e7a7-42e8-b91b-2a68115a6fdf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/AuthServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/AuthConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/CustomUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/constant/AuthenticationConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/AuthControllerV2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/Deneme.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/dto/AuthRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/entity/RoleEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/entity/UserCredential.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/enums/RoleTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/exception/AuthException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/exception/BusinessException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/exception/RestExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/model/UserDetailsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/model/request/AuthLoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/model/request/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/model/response/JwtResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/repository/UserCredentialRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/JwtAuthenticationEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/JwtRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/JwtUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/AuthServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/register/RegisterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/util/JwtTokenUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/resources/Messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/resources/Messages_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/Mappers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/SimpleTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/RestResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-register/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-register/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-register/src/main/java/com/food/recipe/api/EurekaRegisterApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-register/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/GatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/filter/AuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/filter/RouteValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/food/recipe/api/Main.java" afterDir="false" />
+    <list default="true" id="b4853cab-e7a7-42e8-b91b-2a68115a6fdf" name="Changes" comment="initial commit with authservice, gateway and eureka client">
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/AuthConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/AuthConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/constant/AuthenticationConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/constant/AuthenticationConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/AuthControllerV2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/Deneme.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/exception/BusinessException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/exception/BusinessException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/model/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/model/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/JwtAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/jwt/JwtAuthenticationEntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/jwt/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/jwt/JwtUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/login/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/AuthServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +34,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2W7vKLddBzvBcOzFPLXpV7dS8pc" />
@@ -94,20 +52,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "authetication__layer",
     "jdk.selected.JAVA_MODULE": "temurin-19",
-    "last_opened_file_path": "C:/development/food-recipe-api/authentication/src/main/resources"
+    "last_opened_file_path": "C:/development/food-recipe-api/common-api/src/main/java/com/food/recipe/api/exception"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\development\food-recipe-api\common-api\src\main\java\com\food\recipe\api\exception" />
       <recent name="C:\development\food-recipe-api\authentication\src\main\resources" />
       <recent name="C:\development\food-recipe-api\authentication\src\main\java\com\food\recipe\api\repository" />
       <recent name="C:\development\food-recipe-api\authentication\src\main\java\com\food\recipe\api" />
       <recent name="C:\development\food-recipe-api\authentication\src\main\java\com\food\recipe\api\entity" />
-      <recent name="C:\development\food-recipe-api" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.food.recipe.api.model" />
       <recent name="com.food.recipe.api.service.auth.register" />
       <recent name="com.food.recipe.api.controller" />
     </key>
@@ -169,6 +128,30 @@
       <option name="presentableId" value="Default" />
       <updated>1696096370174</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial commit with authservice, gateway and eureka client">
+      <option name="closed" value="true" />
+      <created>1696098006695</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696098006695</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit with authservice, gateway and eureka client" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit with authservice, gateway and eureka client" />
   </component>
 </project>

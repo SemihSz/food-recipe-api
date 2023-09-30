@@ -1,4 +1,4 @@
-package com.food.recipe.api.service;
+package com.food.recipe.api.service.auth.login;
 
 import com.food.recipe.api.model.response.JwtResponse;
 import com.food.recipe.api.util.JwtTokenUtil;

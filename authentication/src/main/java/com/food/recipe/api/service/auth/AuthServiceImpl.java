@@ -3,6 +3,9 @@ package com.food.recipe.api.service.auth;
 import com.food.recipe.api.model.request.AuthLoginRequest;
 import com.food.recipe.api.model.request.RegisterRequest;
 import com.food.recipe.api.model.response.JwtResponse;
+import com.food.recipe.api.service.auth.login.LoginService;
+import com.food.recipe.api.service.auth.register.RegisterService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,15 +13,20 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
+@RequiredArgsConstructor
 public class AuthServiceImpl implements AuthService {
+
+    private final RegisterService registerService;
+
+    private final LoginService loginService;
 
     @Override
     public Boolean registerUser(RegisterRequest registerRequest) {
-        return null;
+        return registerService.apply(registerRequest);
     }
 
     @Override
     public JwtResponse login(AuthLoginRequest authLoginRequest) {
-        return null;
+        return loginService.apply(authLoginRequest);
     }
 }
