@@ -1,5 +1,6 @@
-package com.food.recipe.api.validation;
+package com.food.recipe.api.validation.payload;
 
+import com.food.recipe.api.validation.annotation.ValidPassword;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
