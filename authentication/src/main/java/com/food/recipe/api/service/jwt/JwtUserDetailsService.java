@@ -1,8 +1,6 @@
 package com.food.recipe.api.service.jwt;
 
 import com.food.recipe.api.entity.UserEntity;
-import com.food.recipe.api.repository.UserCredentialRepository;
-import com.food.recipe.api.entity.UserCredential;
 import com.food.recipe.api.model.UserDetailsImpl;
 import com.food.recipe.api.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
