@@ -1,14 +1,12 @@
 package com.food.recipe.api.controller;
 
-import com.food.recipe.api.dto.AuthRequest;
-import com.food.recipe.api.model.response.JwtResponse;
-import com.food.recipe.api.entity.UserCredential;
 import com.food.recipe.api.model.request.AuthLoginRequest;
-import com.food.recipe.api.service.AuthService;
+import com.food.recipe.api.model.RestResponse;
+import com.food.recipe.api.model.request.RegisterRequest;
+import com.food.recipe.api.service.auth.AuthService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,36 +14,23 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/auth")
 public class AuthController {
 
-    private final AuthService service;
-
-
-    private final AuthenticationManager authenticationManager;
-
-
+    private final AuthService authService;
 
     @PostMapping("/register")
-    public String addNewUser(@RequestBody UserCredential user) {
-        return service.saveUser(user);
+    public ResponseEntity<RestResponse<Boolean>> registerUser(@RequestBody RegisterRequest registerRequest) {
+
+        return ResponseEntity.ok(new RestResponse<>(HttpStatus.OK, authService.registerUser(registerRequest)));
     }
 
-    @PostMapping("/token")
-    public String getToken(@RequestBody AuthRequest authRequest) {
-        Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
-        if (authenticate.isAuthenticated()) {
-            return service.generateToken(authRequest.getUsername());
-        } else {
-            throw new RuntimeException("invalid access");
-        }
-    }
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody AuthLoginRequest authRequest) {
 
-    @PostMapping(value = "/login")
-    public JwtResponse login(@RequestBody AuthLoginRequest authRequest) {
-
-        return service.login(authRequest);
+        return ResponseEntity.ok(new RestResponse<>(HttpStatus.OK, authService.login(authRequest)));
     }
 
     @GetMapping("/validate")
-    public String validateToken() {
-        return "Token is valid";
+    public ResponseEntity<RestResponse<String>> validateToken() {
+        return ResponseEntity.ok(new RestResponse<>(HttpStatus.OK, "Token is valid"));
     }
+
 }

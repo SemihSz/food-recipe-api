@@ -32,18 +32,12 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
                 }
 
                 String authHeader = exchange.getRequest().getHeaders().get(HttpHeaders.AUTHORIZATION).get(0);
-//                if (authHeader != null && authHeader.startsWith("Bearer ")) {
-//                    authHeader = authHeader.substring(7);
-//                }
                 try {
-                    // TODO put into the header
-//                    //REST call to AUTH service
                     HttpHeaders httpHeaders = new HttpHeaders();
                     httpHeaders.add(HttpHeaders.AUTHORIZATION.toString(), authHeader);
                     HttpEntity http = new HttpEntity(httpHeaders);
-                    template.exchange("http://localhost:9898/validate", HttpMethod.GET, http, String.class);
-                    //template.getForObject("http://localhost:9898/validate?token" + authHeader, String.class);
-                    //jwtUtil.validateToken(authHeader);
+                    template.exchange("http://AUTH-SERVICE/auth/validate", HttpMethod.GET, http, String.class);
+
 
                 } catch (Exception e) {
                     System.out.println("invalid access...!");

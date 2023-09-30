@@ -1,6 +1,6 @@
 spring:
   application:
-    name: IDENTITY-SERVICE
+    name: AUTH-SERVICE
   h2:
     console:
       enabled: true

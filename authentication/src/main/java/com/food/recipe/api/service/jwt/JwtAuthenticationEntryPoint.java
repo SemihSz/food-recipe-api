@@ -1,4 +1,4 @@
-package com.food.recipe.api.service;
+package com.food.recipe.api.service.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;

@@ -3,6 +3,7 @@ package com.food.recipe.api.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.http.HttpStatus;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -34,6 +35,12 @@ public class RestResponse<T> implements Serializable {
     public RestResponse(int responseCode, T response) {
         this.timestamp = new Date().getTime();
         this.responseCode = responseCode;
+        this.response = response;
+    }
+
+    public RestResponse(HttpStatus responseCode, T response) {
+        this.timestamp = new Date().getTime();
+        this.responseCode = responseCode.value();
         this.response = response;
     }
 

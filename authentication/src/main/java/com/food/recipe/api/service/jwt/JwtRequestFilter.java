@@ -1,4 +1,4 @@
-package com.food.recipe.api.service;
+package com.food.recipe.api.service.jwt;
 
 import com.food.recipe.api.util.JwtTokenUtil;
 import jakarta.servlet.FilterChain;

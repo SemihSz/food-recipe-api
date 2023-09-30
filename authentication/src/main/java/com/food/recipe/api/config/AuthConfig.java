@@ -1,8 +1,8 @@
 package com.food.recipe.api.config;
 
-import com.food.recipe.api.service.JwtAuthenticationEntryPoint;
-import com.food.recipe.api.service.JwtRequestFilter;
-import com.food.recipe.api.service.JwtUserDetailsService;
+import com.food.recipe.api.service.jwt.JwtAuthenticationEntryPoint;
+import com.food.recipe.api.service.jwt.JwtRequestFilter;
+import com.food.recipe.api.service.jwt.JwtUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,14 +28,6 @@ public class AuthConfig {
     private final JwtAuthenticationEntryPoint unauthorizedHandler;
 
     private final JwtUserDetailsService jwtUserDetailsService;
-
-    private static final String[] AUTH_LIST = {
-            // -- swagger ui
-            "**/swagger-resources/**",
-            "/swagger-ui.html",
-            "/v2/api-docs",
-            "/webjars/**"
-    };
 
     @Bean
     public JwtRequestFilter authenticationJwtTokenFilter() {
@@ -63,20 +55,6 @@ public class AuthConfig {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    public UserDetailsService userDetailsService(){
-        return new CustomUserDetailsService();
-    }
-
-
-//    @Bean
-//    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-//        return http.csrf().disable()
-//                .authorizeHttpRequests()
-//                .requestMatchers("/auth/register", "/auth/token", "/auth/validate").permitAll()
-//                .and()
-//                .build();
-//    }
 
     @Bean
     public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
@@ -102,21 +80,4 @@ public class AuthConfig {
 
         return http.build();
     }
-//    @Bean
-//    public PasswordEncoder passwordEncoder() {
-//        return new BCryptPasswordEncoder();
-//    }
-
-//    @Bean
-//    public AuthenticationProvider authenticationProvider(){
-//        DaoAuthenticationProvider authenticationProvider=new DaoAuthenticationProvider();
-//        authenticationProvider.setUserDetailsService(userDetailsService());
-//        authenticationProvider.setPasswordEncoder(passwordEncoder());
-//        return authenticationProvider;
-//    }
-//
-//    @Bean
-//    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
-//        return config.getAuthenticationManager();
-//    }
 }
