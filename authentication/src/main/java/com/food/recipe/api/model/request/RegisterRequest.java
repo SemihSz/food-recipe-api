@@ -1,6 +1,7 @@
 package com.food.recipe.api.model.request;
 
 import com.food.recipe.api.enums.RoleTypes;
+import com.food.recipe.api.validation.ValidPassword;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,6 +14,7 @@ public class RegisterRequest {
 
     private String username;
 
+    @ValidPassword
     private String password;
 
     private String email;
