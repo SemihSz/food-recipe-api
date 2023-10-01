@@ -1,4 +1,7 @@
 spring:
+  cloud:
+    discovery:
+      enabled: true
   application:
     name: AUTH-SERVICE
   h2:

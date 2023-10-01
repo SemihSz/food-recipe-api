@@ -36,7 +36,7 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
                     HttpHeaders httpHeaders = new HttpHeaders();
                     httpHeaders.add(HttpHeaders.AUTHORIZATION.toString(), authHeader);
                     HttpEntity http = new HttpEntity(httpHeaders);
-                    template.exchange("http://AUTH-SERVICE/auth/validate", HttpMethod.GET, http, String.class);
+                    template.exchange("http://localhost:9898/auth/validate", HttpMethod.GET, http, String.class);
 
 
                 } catch (Exception e) {
