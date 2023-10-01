@@ -49,11 +49,15 @@ public class UserEntity extends DateAudit {
 
     private String url;
 
-    private String bio;
+    private String bioHeader;
+
+    private String bioDesc;
 
     private String gender;
 
     private String phone;
+
+    private String profileImageId;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_roles",
