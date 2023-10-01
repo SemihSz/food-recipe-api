@@ -15,6 +15,7 @@ import org.springframework.context.MessageSource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
@@ -80,14 +81,20 @@ public class RegisterService implements SimpleTask<RegisterRequest, Boolean> {
 
             final UserEntity user = UserEntity.builder()
                     .username(registerRequest.getUsername())
+                    .name(registerRequest.getName())
+                    .surname(registerRequest.getSurname())
+                    .email(registerRequest.getEmail())
                     .password(registerRequest.getPassword())
                     .roles(roles)
+                    .createdAt(Instant.now())
+                    .updatedAt(Instant.now())
                     .build();
             userRepository.save(user);
 
             return Boolean.TRUE;
 
         } catch (Exception e) {
+            log.info(e.getMessage());
             return Boolean.FALSE;
         }
     }
@@ -104,7 +111,7 @@ public class RegisterService implements SimpleTask<RegisterRequest, Boolean> {
         final String passwordEncode = bcryptEncoder.encode(password);
         final String rePasswordEncode = bcryptEncoder.encode(rePassword);
 
-        if (passwordEncode.equals(rePasswordEncode)) {
+        if (bcryptEncoder.matches(password, passwordEncode) && bcryptEncoder.matches(rePassword, rePasswordEncode)) {
             return passwordEncode;
         }
 

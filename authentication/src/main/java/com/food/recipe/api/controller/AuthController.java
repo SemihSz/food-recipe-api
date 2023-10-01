@@ -2,6 +2,7 @@ package com.food.recipe.api.controller;
 
 import com.food.recipe.api.model.request.AuthLoginRequest;
 import com.food.recipe.api.model.RestResponse;
+import com.food.recipe.api.model.request.ChangePasswordRequest;
 import com.food.recipe.api.model.request.RegisterRequest;
 import com.food.recipe.api.service.auth.AuthService;
 import jakarta.validation.Valid;
@@ -32,6 +33,12 @@ public class AuthController {
     @GetMapping("/validate")
     public ResponseEntity<RestResponse<String>> validateToken() {
         return ResponseEntity.ok(new RestResponse<>(HttpStatus.OK, "Token is valid"));
+    }
+
+    @PostMapping("/password/change")
+    public ResponseEntity<RestResponse<Boolean>> passwordChange(@Valid @RequestBody ChangePasswordRequest request) {
+
+        return ResponseEntity.ok(new RestResponse<>(HttpStatus.OK, authService.changePassword(request)));
     }
 
 }
