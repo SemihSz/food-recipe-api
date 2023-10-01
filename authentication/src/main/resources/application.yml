@@ -14,7 +14,13 @@ spring:
     password: password
     driver-class-name: org.h2.Driver
 
-
+logging:
+  level.*:
+    org.springframework.web.client.RestTemplate: INFO
+    com.application.document: DEBUG
+    org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor: TRACE
+  file:
+    name: logs/auth-app.log
 eureka:
   client:
     service-url:
