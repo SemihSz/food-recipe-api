@@ -4,6 +4,7 @@ import com.food.recipe.api.model.request.AuthLoginRequest;
 import com.food.recipe.api.model.RestResponse;
 import com.food.recipe.api.model.request.RegisterRequest;
 import com.food.recipe.api.service.auth.AuthService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +18,7 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping("/register")
-    public ResponseEntity<RestResponse<Boolean>> registerUser(@RequestBody RegisterRequest registerRequest) {
+    public ResponseEntity<RestResponse<Boolean>> registerUser(@Valid @RequestBody RegisterRequest registerRequest) {
 
         return ResponseEntity.ok(new RestResponse<>(HttpStatus.OK, authService.registerUser(registerRequest)));
     }

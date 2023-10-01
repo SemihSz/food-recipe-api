@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4853cab-e7a7-42e8-b91b-2a68115a6fdf" name="Changes" comment="authentication module refactor operations">
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/DataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/AuthConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/AuthConfig.java" afterDir="false" />
+    <list default="true" id="b4853cab-e7a7-42e8-b91b-2a68115a6fdf" name="Changes" comment="authentication refactor and remove unused classes">
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/entity/audit/DateAudit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/info/UserInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/validation/PasswordValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/validation/ValidPassword.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/entity/UserCredential.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/model/response/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/model/response/JwtResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/login/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/login/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/RestResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/RestResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/filter/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/model/request/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/model/request/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +63,7 @@
       <recent name="C:\development\food-recipe-api\authentication\src\main\java\com\food\recipe\api\entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.food.recipe.api.service.info" />
       <recent name="com.food.recipe.api.config" />
       <recent name="com.food.recipe.api.model" />
       <recent name="com.food.recipe.api.service.auth.register" />
@@ -187,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696099200866</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="authentication refactor and remove unused classes">
+      <option name="closed" value="true" />
+      <created>1696107489016</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696107489016</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,7 +209,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit with authservice, gateway and eureka client" />
     <MESSAGE value="authentication module refactor operations" />
-    <option name="LAST_COMMIT_MESSAGE" value="authentication module refactor operations" />
+    <MESSAGE value="authentication refactor and remove unused classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="authentication refactor and remove unused classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -226,7 +232,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/AuthConfig.java</url>
-          <line>69</line>
+          <line>64</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -246,11 +252,6 @@
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/login/LoginService.java</url>
           <line>44</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/AuthController.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/util/JwtTokenUtil.java</url>

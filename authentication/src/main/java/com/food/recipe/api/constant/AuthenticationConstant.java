@@ -15,6 +15,8 @@ public class AuthenticationConstant {
 
         public static final String AUTH_USER_EXIST = "authentication.user_exits";
 
+        public static final String AUTH_USER_PASSWORD_NOT_MATCH = "authentication.passwords.not_match";
+
         public static final String AUTH_EMAIL_EXIST = "authentication.email_exits";
 
         public Exception() {
