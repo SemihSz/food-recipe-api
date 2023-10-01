@@ -1,7 +1,6 @@
 package com.food.recipe.api.entity;
 
 import com.food.recipe.api.entity.audit.DateAudit;
-import com.food.recipe.api.validation.ValidPassword;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

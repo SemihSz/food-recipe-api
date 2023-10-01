@@ -47,8 +47,9 @@ public class RegisterService implements SimpleTask<RegisterRequest, Boolean> {
         } else if (userRepository.existsByEmail(registerRequest.getEmail())) {
             throw new com.food.recipe.api.exception.AuthException((messageSource.getMessage(AuthenticationConstant.Exception.AUTH_EMAIL_EXIST, null, Locale.ENGLISH)));
         }
-        BCryptPasswordEncoder bcryptEncoder = new BCryptPasswordEncoder();
-        registerRequest.setPassword(bcryptEncoder.encode(registerRequest.getPassword()));
+
+        registerRequest.setPassword(passwordControl(registerRequest.getPassword(), registerRequest.getRePassword()));
+
         try {
             final RoleTypes strRoles = registerRequest.getRole();
             Set<RoleEntity> roles = new HashSet<>();
@@ -59,22 +60,21 @@ public class RegisterService implements SimpleTask<RegisterRequest, Boolean> {
                 roles.add(userRole);
             } else {
                 switch (strRoles) {
-                    case ROLE_ADMIN:
+                    case ROLE_ADMIN -> {
                         RoleEntity adminRole = roleRepository.findByName(RoleTypes.ROLE_ADMIN)
                                 .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
                         roles.add(adminRole);
-
-                        break;
-                    case ROLE_MODERATOR:
+                    }
+                    case ROLE_MODERATOR -> {
                         RoleEntity modRole = roleRepository.findByName(RoleTypes.ROLE_MODERATOR)
                                 .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
                         roles.add(modRole);
-
-                        break;
-                    default:
+                    }
+                    default -> {
                         RoleEntity userRole = roleRepository.findByName(RoleTypes.ROLE_USER)
                                 .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
                         roles.add(userRole);
+                    }
                 }
             }
 
@@ -90,5 +90,25 @@ public class RegisterService implements SimpleTask<RegisterRequest, Boolean> {
         } catch (Exception e) {
             return Boolean.FALSE;
         }
+    }
+
+    /**
+     * Controlling password and rePassword with encoded version. If it doesnt match code produce ${@link AuthException}
+     * @param password String
+     * @param rePassword String
+     * @return String
+     */
+    private String passwordControl(String password, String rePassword) {
+
+        BCryptPasswordEncoder bcryptEncoder = new BCryptPasswordEncoder();
+        final String passwordEncode = bcryptEncoder.encode(password);
+        final String rePasswordEncode = bcryptEncoder.encode(rePassword);
+
+        if (passwordEncode.equals(rePasswordEncode)) {
+            return passwordEncode;
+        }
+
+        throw new com.food.recipe.api.exception.AuthException((messageSource.getMessage(AuthenticationConstant.Exception.AUTH_USER_PASSWORD_NOT_MATCH,
+                null, Locale.ENGLISH)));
     }
 }

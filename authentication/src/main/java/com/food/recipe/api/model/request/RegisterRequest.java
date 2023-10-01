@@ -1,7 +1,7 @@
 package com.food.recipe.api.model.request;
 
 import com.food.recipe.api.enums.RoleTypes;
-import com.food.recipe.api.validation.ValidPassword;
+import com.food.recipe.api.validation.annotation.ValidPassword;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
@@ -43,8 +43,7 @@ public class RegisterRequest {
 
     private String phone;
 
-    @NotBlank
-    private String imageId;
+    private String profilePhotoId;
 
     private RoleTypes role;
 }
