@@ -52,11 +52,15 @@ public class UserEntity {
 
     private String url;
 
-    private String bio;
+    private String bioHeader;
+
+    private String bioDesc;
 
     private String gender;
 
     private String phone;
+
+    private String profileImageId;
 
     @CreatedDate
     @Column(nullable = false, updatable = false)

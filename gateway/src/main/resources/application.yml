@@ -1,5 +1,7 @@
 spring:
  cloud:
+   discovery:
+     enabled: true
    gateway:
      routes:
        - id: swiggy-app
@@ -10,10 +12,10 @@ spring:
            - AuthenticationFilter
 
 
-       - id: restaurant-service
-         uri: lb://RESTAURANT-SERVICE
+       - id: auth-service
+         uri: lb://AUTH-SERVICE
          predicates:
-           - Path=/restaurant/**
+           - Path=/summary/**
          filters:
            - AuthenticationFilter
 
