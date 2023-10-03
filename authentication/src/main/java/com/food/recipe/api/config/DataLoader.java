@@ -20,9 +20,9 @@ public class DataLoader implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
 
         log.info("Initial save operation start");
-        repository.save(new RoleEntity(1L, RoleTypes.ROLE_ADMIN));
-        repository.save(new RoleEntity(2L, RoleTypes.ROLE_USER));
-        repository.save(new RoleEntity(3L, RoleTypes.ROLE_MODERATOR));
+//        repository.save(new RoleEntity(1L, RoleTypes.ROLE_ADMIN));
+//        repository.save(new RoleEntity(2L, RoleTypes.ROLE_USER));
+//        repository.save(new RoleEntity(3L, RoleTypes.ROLE_MODERATOR));
         log.info("Initial save operation finished");
     }
 }

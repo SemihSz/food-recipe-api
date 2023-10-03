@@ -4,14 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4853cab-e7a7-42e8-b91b-2a68115a6fdf" name="Changes" comment="authentication refactor and remove unused classes">
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/entity/audit/DateAudit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/info/UserInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/validation/PasswordValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/validation/ValidPassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/model/request/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/model/request/RegisterRequest.java" afterDir="false" />
+    <list default="true" id="b4853cab-e7a7-42e8-b91b-2a68115a6fdf" name="Changes" comment="config yml update">
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/config/GateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/SocialApiApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/controller/PostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/post/CommentEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/post/LikeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/post/PostEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/post/SavedPostEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/user/SocialUserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/BaseRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/post/PostRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/user/RegisterUserSocialAppRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/post/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/post/LikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/post/PostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/post/SavedPostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/user/SocialUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/PostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/RegisterUserSocialAppService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/impl/PostServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/AuthConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/AuthConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-register/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-register/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/filter/AuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +58,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="user_info" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,65 +69,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "authetication__layer",
-    "jdk.selected.JAVA_MODULE": "temurin-19",
-    "last_opened_file_path": "C:/development/food-recipe-api/common-api/src/main/java/com/food/recipe/api/exception",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;social-ap&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/development/food-recipe-api/gateway/src/main/java/com/food/recipe/api&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\development\food-recipe-api\gateway\src\main\java\com\food\recipe\api" />
+      <recent name="C:\development\food-recipe-api\social-api\src\main\resources" />
       <recent name="C:\development\food-recipe-api\common-api\src\main\java\com\food\recipe\api\exception" />
       <recent name="C:\development\food-recipe-api\authentication\src\main\resources" />
       <recent name="C:\development\food-recipe-api\authentication\src\main\java\com\food\recipe\api\repository" />
-      <recent name="C:\development\food-recipe-api\authentication\src\main\java\com\food\recipe\api" />
-      <recent name="C:\development\food-recipe-api\authentication\src\main\java\com\food\recipe\api\entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.food.recipe.api.util" />
       <recent name="com.food.recipe.api.service.info" />
       <recent name="com.food.recipe.api.config" />
       <recent name="com.food.recipe.api.model" />
       <recent name="com.food.recipe.api.service.auth.register" />
-      <recent name="com.food.recipe.api.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.food.recipe.api.AuthServiceApplication">
-    <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.microservice.jwt.AuthServiceApplication" />
-      <module name="authentication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.microservice.jwt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EurekaRegisterApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.microservice.jwt.EurekaRegisterApplication" />
-      <module name="eureka-register" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.microservice.jwt.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.SocialApiApplication">
     <configuration name="EurekaRegisterApplication" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.food.recipe.api.EurekaRegisterApplication" />
       <module name="eureka-register" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.food.recipe.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.food.recipe.api.GatewayApplication" />
+      <module name="gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.food.recipe.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocialApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.food.recipe.api.SocialApiApplication" />
+      <module name="social-api" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.food.recipe.api.*" />
@@ -136,26 +164,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.food.recipe.api.GatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.food.recipe.api.GatewayApplication" />
-      <module name="gateway" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.food.recipe.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="All in authentication" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="authentication" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.com.food.recipe.api.AuthServiceApplication" />
-        <item itemvalue="Application.com.food.recipe.api.GatewayApplication" />
+        <item itemvalue="Application.SocialApiApplication" />
         <item itemvalue="Application.com.food.recipe.api.EurekaRegisterApplication" />
-        <item itemvalue="Application.EurekaRegisterApplication" />
-        <item itemvalue="Application.AuthServiceApplication" />
+        <item itemvalue="Application.GatewayApplication" />
+        <item itemvalue="Application.com.food.recipe.api.AuthServiceApplication" />
+        <item itemvalue="JUnit.All in authentication" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +215,71 @@
       <option name="project" value="LOCAL" />
       <updated>1696107489016</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="authentication validator for password">
+      <option name="closed" value="true" />
+      <created>1696108870918</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696108870918</updated>
+    </task>
+    <task id="LOCAL-00005" summary="authentication validator for password">
+      <option name="closed" value="true" />
+      <created>1696109802860</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696109802860</updated>
+    </task>
+    <task id="LOCAL-00006" summary="image validator and other validator updates">
+      <option name="closed" value="true" />
+      <created>1696111383779</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696111383779</updated>
+    </task>
+    <task id="LOCAL-00007" summary="utils add take from old other project">
+      <option name="closed" value="true" />
+      <created>1696113194872</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696113194872</updated>
+    </task>
+    <task id="LOCAL-00008" summary="authentication updates">
+      <option name="closed" value="true" />
+      <created>1696148883765</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696148883765</updated>
+    </task>
+    <task id="LOCAL-00009" summary="forgot password endpoint add and some control updates">
+      <option name="closed" value="true" />
+      <created>1696152747566</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696152747566</updated>
+    </task>
+    <task id="LOCAL-00010" summary="summary info controller">
+      <option name="closed" value="true" />
+      <created>1696154560644</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696154560644</updated>
+    </task>
+    <task id="LOCAL-00011" summary="config yml update">
+      <option name="closed" value="true" />
+      <created>1696164681034</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696164681034</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,55 +297,80 @@
     <MESSAGE value="initial commit with authservice, gateway and eureka client" />
     <MESSAGE value="authentication module refactor operations" />
     <MESSAGE value="authentication refactor and remove unused classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="authentication refactor and remove unused classes" />
+    <MESSAGE value="register request updates" />
+    <MESSAGE value="image validator and other validator updates" />
+    <MESSAGE value="utils add take from old other project" />
+    <MESSAGE value="authentication updates" />
+    <MESSAGE value="forgot password endpoint add and some control updates" />
+    <MESSAGE value="summary info controller" />
+    <MESSAGE value="config yml update" />
+    <option name="LAST_COMMIT_MESSAGE" value="config yml update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/filter/AuthenticationFilter.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/jwt/JwtRequestFilter.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/login/LoginService.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/AuthConfig.java</url>
-          <line>64</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/login/LoginService.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/jwt/JwtRequestFilter.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/login/LoginService.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/util/JwtTokenUtil.java</url>
           <line>30</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/validation/payload/ImageValidator.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/register/RegisterService.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/register/RegisterService.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/register/RegisterService.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/register/RegisterService.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/register/RegisterService.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/UserSummaryController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/AuthController.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/controller/UserController.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/config/GateConfig.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.web.server.adapter.DefaultServerWebExchange" memberName="request" />
+        <PinnedItemInfo parentTag="org.springframework.web.server.adapter.DefaultServerWebExchange" memberName="response" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

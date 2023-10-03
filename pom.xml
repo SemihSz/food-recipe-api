@@ -29,6 +29,7 @@
         <module>gateway</module>
         <module>authentication</module>
         <module>common-api</module>
+        <module>social-api</module>
     </modules>
 
     <dependencies>
