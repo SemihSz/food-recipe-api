@@ -5,14 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4853cab-e7a7-42e8-b91b-2a68115a6fdf" name="Changes" comment="authentication refactor and remove unused classes">
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/entity/audit/DateAudit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/info/UserInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/validation/PasswordValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/validation/ValidPassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/model/request/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/model/request/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/TokenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/config/AuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/config/WebClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-register/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-register/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-register/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-register/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/GatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/filter/AuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/filter/RouteValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,32 +43,48 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2W7vKLddBzvBcOzFPLXpV7dS8pc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "authetication__layer",
-    "jdk.selected.JAVA_MODULE": "temurin-19",
-    "last_opened_file_path": "C:/development/food-recipe-api/common-api/src/main/java/com/food/recipe/api/exception",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/development/food-recipe-api-micro/gateway/src/main/java/com/food/recipe/api/config&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\development\food-recipe-api-micro\gateway\src\main\java\com\food\recipe\api\config" />
       <recent name="C:\development\food-recipe-api\common-api\src\main\java\com\food\recipe\api\exception" />
       <recent name="C:\development\food-recipe-api\authentication\src\main\resources" />
       <recent name="C:\development\food-recipe-api\authentication\src\main\java\com\food\recipe\api\repository" />
       <recent name="C:\development\food-recipe-api\authentication\src\main\java\com\food\recipe\api" />
-      <recent name="C:\development\food-recipe-api\authentication\src\main\java\com\food\recipe\api\entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.food.recipe.api.service.info" />
@@ -70,7 +94,7 @@
       <recent name="com.food.recipe.api.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.food.recipe.api.AuthServiceApplication">
+  <component name="RunManager" selected="Spring Boot.AuthServiceApplication">
     <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.microservice.jwt.AuthServiceApplication" />
       <module name="authentication" />
@@ -149,6 +173,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="authentication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.food.recipe.api.AuthServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaRegisterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="eureka-register" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.food.recipe.api.EurekaRegisterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.food.recipe.api.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.com.food.recipe.api.AuthServiceApplication" />
@@ -167,6 +212,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696096370174</updated>
+      <workItem from="1698871532578" duration="2165000" />
+      <workItem from="1698873706235" duration="1250000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit with authservice, gateway and eureka client">
       <option name="closed" value="true" />
@@ -194,6 +241,9 @@
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -231,14 +281,6 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/AuthConfig.java</url>
-          <line>64</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/login/LoginService.java</url>
           <line>41</line>
           <option name="timeStamp" value="5" />
@@ -258,7 +300,28 @@
           <line>30</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/login/LoginService.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/jwt/JwtRequestFilter.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/jwt/JwtRequestFilter.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" memberName="BCRYPT_PATTERN" />
+        <PinnedItemInfo parentTag="org.springframework.security.authentication.dao.DaoAuthenticationProvider" memberName="passwordEncoder" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
