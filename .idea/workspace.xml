@@ -4,23 +4,179 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4853cab-e7a7-42e8-b91b-2a68115a6fdf" name="Changes" comment="authentication refactor and remove unused classes">
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/TokenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/config/AuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/config/WebClientConfig.java" afterDir="false" />
+    <list default="true" id="b4853cab-e7a7-42e8-b91b-2a68115a6fdf" name="Changes" comment="micro service gateway done!!!!!!!!">
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/RestClientRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/document/Base64Files.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/document/DocumentInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/document/request/SaveDocumentBase64Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/document/request/SaveDocumentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/document/response/DocumentInfoResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/document/response/DocumentListResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/document/response/SaveDocumentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/enums/ApplicationEnums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/logger/SaveLogRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/util/ImageUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/util/MultipartFileToBase64Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/validation/annotation/CustomExclude.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/validation/payload/CustomExcludePayload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger/src/main/java/com/food/recipe/api/LoggerMainApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger/src/main/java/com/food/recipe/api/configuration/AsyncConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger/src/main/java/com/food/recipe/api/configuration/WebConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger/src/main/java/com/food/recipe/api/controller/LoggerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger/src/main/java/com/food/recipe/api/entity/LoggerEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger/src/main/java/com/food/recipe/api/repository/LoggerEntityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger/src/main/java/com/food/recipe/api/service/LoggerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger/src/main/java/com/food/recipe/api/service/LoggerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger/src/main/java/com/food/recipe/api/service/executable/SaveLogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger/src/main/resources/Messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger/src/main/resources/Messages_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logger/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/doc/food-recipe-v2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/doc/food-recipe-v3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/doc/food-recipe-v4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/doc/food-recipe.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/SocialApiApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/aspect/SecurityAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/config/LoggingFilterBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/config/RequestResponseLoggingInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/config/RestTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/config/interceptor/RestClientRequestInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/controller/LikeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/controller/PostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/controller/RecipeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/controller/ReplyCommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/post/DislikeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/post/LikeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/post/PostEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/post/SavedPostEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/post/comment/CommentsEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/post/comment/ReplyCommentEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/post/comment/like/CommentDislikeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/post/comment/like/CommentLikedEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/post/comment/like/ReplyCommentLikedEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/recipe/RecipeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/recipe/RecipeStepEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/entity/user/SocialUserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/exception/RestExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/exception/SocialApiAuthException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/mapper/CreateRecipeInputMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/mapper/RecipeEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/mapper/post/PostImageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/ProjectInfosProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/comment/CommentList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/comment/ReplyCommentList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/enums/LikeEnums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/input/SaveFileInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/input/comment/AddCommentInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/input/comment/AddReplyCommentInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/input/comment/ReplyCommentInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/input/like/LikeDislikeInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/input/post/SelectedPostInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/input/post/UserPostInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/input/recipe/CreateRecipeInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/properties/ProjectInfoModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/recipe/RecipeStep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/BaseRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/comment/CommentBaseRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/comment/CommentDeleteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/comment/CommentUpdateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/comment/CreateCommentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/comment/PostCommentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/comment/reply/BaseReplyCommentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/comment/reply/UpdateReplyCommentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/like/LikeRecipeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/like/LikedBaseRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/post/GetUserPostRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/post/PostRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/post/SelectedPostRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/recipe/CreateRecipeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/recipe/DeleteRecipeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/recipe/UpdateRecipeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/request/user/RegisterUserSocialAppRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/response/comment/CommentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/response/comment/SelectedPostCommentsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/response/comment/reply/ReplyCommentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/response/post/CreatePostResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/response/post/PostImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/response/post/PostImageResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/response/post/PostResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/response/post/SelectedPostResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/response/post/UserPostResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/model/response/recipe/CreateRecipeResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/post/DislikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/post/LikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/post/PostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/post/SavedPostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/post/comment/CommentsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/post/comment/ReplyCommentEntityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/post/comment/like/CommentDislikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/post/comment/like/CommentLikedEntityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/post/comment/like/ReplyCommentLikedEntityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/recipe/RecipeEntityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/recipe/RecipeStepEntityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/repository/user/SocialUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/LikeDislikeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/PostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/RecipeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/ReplyCommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/client/GenericRestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/client/ServiceRestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/RegisterUserSocialAppService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/comment/AddCommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/comment/DeleteCommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/comment/UpdateCommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/comment/info/GetCommentInformationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/comment/info/GetReplyCommentInformationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/comment/info/GetReplyCommentsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/comment/info/GetSelectedCommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/comment/info/GetSelectedPostCommentCountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/comment/reply/AddReplyCommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/comment/reply/DeleteReplyCommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/comment/reply/UpdateReplyCommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/config/GetProjectInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/converter/ConvertBase64Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/like/SaveDislikeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/like/SaveLikeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/logger/LoggerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/post/GetPostInformationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/post/GetSelectedPostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/post/GetSelectedUserPostsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/post/SaveFileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/recipe/CreateNewRecipeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/user/GetSocialAppUserInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/executable/user/GetUserInfoWithIdService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/impl/PostServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/impl/RecipeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/impl/ReplyCommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/java/com/food/recipe/api/util/ClientFactoryUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/resources/Messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/resources/Messages_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social-api/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/config/DataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-register/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-register/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/ExceptionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/model/ExceptionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/util/ClientFactoryUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-api/src/main/java/com/food/recipe/api/util/ClientFactoryUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eureka-register/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-register/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/GatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/config/AppConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/filter/AuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/filter/RouteValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/config/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/config/AuthFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +199,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -61,10 +220,11 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;temurin-19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/development/food-recipe-api-micro/gateway/src/main/java/com/food/recipe/api/config&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/development/food-recipe-api-micro&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -80,11 +240,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\development\food-recipe-api-micro" />
       <recent name="C:\development\food-recipe-api-micro\gateway\src\main\java\com\food\recipe\api\config" />
       <recent name="C:\development\food-recipe-api\common-api\src\main\java\com\food\recipe\api\exception" />
       <recent name="C:\development\food-recipe-api\authentication\src\main\resources" />
       <recent name="C:\development\food-recipe-api\authentication\src\main\java\com\food\recipe\api\repository" />
-      <recent name="C:\development\food-recipe-api\authentication\src\main\java\com\food\recipe\api" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.food.recipe.api.service.info" />
@@ -94,7 +254,14 @@
       <recent name="com.food.recipe.api.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthServiceApplication">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.GatewayApplication">
     <configuration name="AuthServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.microservice.jwt.AuthServiceApplication" />
       <module name="authentication" />
@@ -194,6 +361,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoggerMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="logger" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.food.recipe.api.LoggerMainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocialApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="social-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.food.recipe.api.SocialApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.com.food.recipe.api.AuthServiceApplication" />
@@ -213,7 +394,12 @@
       <option name="presentableId" value="Default" />
       <updated>1696096370174</updated>
       <workItem from="1698871532578" duration="2165000" />
-      <workItem from="1698873706235" duration="1250000" />
+      <workItem from="1698873706235" duration="1572000" />
+      <workItem from="1698914845952" duration="3221000" />
+      <workItem from="1698919659874" duration="2573000" />
+      <workItem from="1698922246301" duration="935000" />
+      <workItem from="1698923189088" duration="615000" />
+      <workItem from="1698930034540" duration="1824000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit with authservice, gateway and eureka client">
       <option name="closed" value="true" />
@@ -239,7 +425,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696107489016</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="micro service gateway done!!!!!!!!">
+      <option name="closed" value="true" />
+      <created>1698875259168</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698875259168</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +454,8 @@
     <MESSAGE value="initial commit with authservice, gateway and eureka client" />
     <MESSAGE value="authentication module refactor operations" />
     <MESSAGE value="authentication refactor and remove unused classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="authentication refactor and remove unused classes" />
+    <MESSAGE value="micro service gateway done!!!!!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="micro service gateway done!!!!!!!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -276,34 +471,14 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/login/LoginService.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/login/LoginService.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/jwt/JwtRequestFilter.java</url>
           <line>41</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/login/LoginService.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/util/JwtTokenUtil.java</url>
           <line>30</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/auth/login/LoginService.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/jwt/JwtRequestFilter.java</url>
@@ -314,6 +489,21 @@
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/jwt/JwtRequestFilter.java</url>
           <line>47</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/controller/TokenController.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/food/recipe/api/service/jwt/JwtRequestFilter.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/food/recipe/api/config/AuthFilter.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

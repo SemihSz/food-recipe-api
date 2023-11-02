@@ -41,7 +41,7 @@ public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config> 
 
             return webClientBuilder.build()
                     .get()
-                    .uri("http://localhost:9898/users/token/validate")
+                    .uri("http://authentication/users/token/validate")
                     .headers(httpHeaders -> httpHeaders.addAll(headers))
                     .retrieve()
                     .bodyToMono(String.class)

@@ -1,0 +1,51 @@
+{
+  "filters": {
+    "category": "Akşam Yemeği",
+    "cuisine": "İtalyan mutfağı",
+    "dietaryRestrictions": ["Vejetaryen", "Gluten-Free", "Dairy-Free"],
+    "maxPreparationTime": 60,
+    "difficultyLevel": "Orta"
+  },
+  "pagination": {
+    "page": 1,
+    "pageSize": 15
+  },
+  "sorting": {
+    "sortBy": "rating",
+    "sortOrder": "desc"
+  },
+  "searchQuery": "Pizza",
+  "ingredients": {
+    "include": ["mozarella peyniri", "domates sosu", "mantar"],
+    "exclude": ["sucuk", "salam"]
+  },
+  "servings": 4,
+  "cupMeasurements": {
+    "un": 2.5,
+    "şeker": 1.5
+  },
+  "instructionsRequired": true,
+  "recipeSteps": [
+    {
+      "stepNumber": 1,
+      "title": "Title",
+      "description": "Hamuru hazırlamak için...",
+      "stages": [],
+      "imageBase64": "base64_encoded_image_1"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Title",
+      "description": "Sosu yapmak için...",
+      "stages": [],
+      "imageBase64": "base64_encoded_image_2"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Title",
+      "description": "Pizzayı pişirmek için...",
+      "stages": [],
+      "imageBase64": "base64_encoded_image_3"
+    }
+  ]
+}

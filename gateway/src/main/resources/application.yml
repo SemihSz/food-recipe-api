@@ -19,10 +19,16 @@ spring:
             Path=/users/token/**
           filters:
             - AuthFilter
-        - id: authentication
+        - id: authentications
           uri: lb://authentication
           predicates:
             - Path=/users/auth/login,/users/auth/register
+        - id: social-api
+          uri: lb://SOCIAL-API
+          filters:
+            - AuthFilter
+          predicates:
+            - Path=/social/**
   zipkin:
     baseUrl: http://127.0.0.1:9411/
 

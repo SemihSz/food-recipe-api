@@ -3,11 +3,14 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/authentication/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/deneme/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/denemes/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-register/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-register/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/social-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

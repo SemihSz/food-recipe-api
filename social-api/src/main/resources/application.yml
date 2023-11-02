@@ -1,0 +1,79 @@
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+  application:
+    name: SOCIAL-API
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/food_recipe_api
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: pass
+    hikari:
+      auto_commit: false
+
+  jackson:
+    deserialization:
+      FAIL_ON_IGNORED_PROPERTIES: false
+    serialization:
+      INDENT_OUTPUT: false
+      WRITE_DATES_AS_TIMESTAMPS: false
+      WRITE_BIGDECIMAL_AS_PLAIN: true
+  cloud:
+    stream:
+      binder:
+        brokers: localhost:9092
+    compatibility-verifier:
+      enabled: false
+
+  zipkin:
+    baseUrl: http://127.0.0.1:9411/
+
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone : http://localhost:8761/eureka/
+
+
+
+logging:
+  level.*:
+    org.springframework.web.client.RestTemplate: INFO
+    com.application.document: DEBUG
+    org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor: TRACE
+  file:
+    name: logs/social-api-app.log
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include=*:
+
+server:
+  port: 9978
+  servlet:
+    context-path: /social
+
+project-info:
+  packages:
+    - name: AUTHENTICATION
+      url: http://localhost:9898
+    - name: DOCUMENT
+      url: http://localhost:9545
+    - name: LOGGER
+      url: http://localhost:9818
