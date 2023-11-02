@@ -31,6 +31,7 @@
         <module>common-api</module>
         <module>logger</module>
         <module>social-api</module>
+        <module>document-save</module>
     </modules>
 
 
