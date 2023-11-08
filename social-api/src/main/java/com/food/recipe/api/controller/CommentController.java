@@ -65,4 +65,11 @@ public class CommentController {
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping("/dislike")
+    public ResponseEntity dislike(@RequestBody LikedBaseRequest request) {
+
+        commentService.dislikes(request);
+        return ResponseEntity.ok().build();
+    }
+
 }
