@@ -32,6 +32,7 @@
         <module>logger</module>
         <module>social-api</module>
         <module>document-save</module>
+        <module>countries_api</module>
     </modules>
 
 
