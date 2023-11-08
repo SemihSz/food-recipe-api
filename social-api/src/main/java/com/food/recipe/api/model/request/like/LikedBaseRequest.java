@@ -17,5 +17,5 @@ public class LikedBaseRequest extends BaseRequest {
 
   private Long recipeId;
 
-  private LikeEnums likeEnums;
+  private LikeEnums likeType;
 }

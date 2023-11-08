@@ -131,7 +131,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public void likes(LikedBaseRequest request) {
 
-        final SocialUserEntity socialUserEntity = getSocialAppUserInfoService.apply(request.getId(), request.getUsername());
+        final SocialUserEntity socialUserEntity = getSocialAppUserInfoService.apply(request.getUserId(), request.getUsername());
         final PostEntity getPostInformation = getPostInformationService.apply(request.getPostId());
         final CommentsEntity comment = getCommentInformationService.apply(request.getCommentId());
 
@@ -152,7 +152,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public void dislikes(LikedBaseRequest request) {
 
-        final SocialUserEntity socialUserEntity = getSocialAppUserInfoService.apply(request.getId(), request.getUsername());
+        final SocialUserEntity socialUserEntity = getSocialAppUserInfoService.apply(request.getUserId(), request.getUsername());
         final PostEntity getPostInformation = getPostInformationService.apply(request.getPostId());
         final CommentsEntity comment = getCommentInformationService.apply(request.getCommentId());
 

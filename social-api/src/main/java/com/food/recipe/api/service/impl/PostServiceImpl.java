@@ -10,7 +10,6 @@ import com.food.recipe.api.model.input.SaveFileInput;
 import com.food.recipe.api.model.input.like.LikeDislikeInput;
 import com.food.recipe.api.model.input.post.SelectedPostInput;
 import com.food.recipe.api.model.input.post.UserPostInput;
-import com.food.recipe.api.model.request.BaseRequest;
 import com.food.recipe.api.model.request.like.LikedBaseRequest;
 import com.food.recipe.api.model.request.post.GetUserPostRequest;
 import com.food.recipe.api.model.request.post.PostRequest;
@@ -75,13 +74,13 @@ public class PostServiceImpl implements PostService {
     public CreatePostResponse createPost(PostRequest request) {
 
         // Get user information from a social app using a service
-        final SocialUserEntity socialUserEntity = getSocialAppUserInfoService.apply(request.getId(), request.getUsername());
+        final SocialUserEntity socialUserEntity = getSocialAppUserInfoService.apply(request.getUserId(), request.getUsername());
 
         if (Objects.nonNull(socialUserEntity)) {
 
             // Create a builder for saving a file
             final SaveFileInput.SaveFileInputBuilder builder = SaveFileInput.builder();
-            builder.userId(request.getId())
+            builder.userId(request.getUserId())
                     .username(request.getUsername());
 
             if (Objects.nonNull(request.getBase64ImageList()) && CollectionUtils.isEmpty(request.getBase64ImageList())) {
@@ -207,7 +206,7 @@ public class PostServiceImpl implements PostService {
     @Override
     public void likes(LikedBaseRequest request) {
         // Retrieve user and post information from the request.
-        final SocialUserEntity socialUserEntity = getSocialAppUserInfoService.apply(request.getId(), request.getUsername());
+        final SocialUserEntity socialUserEntity = getSocialAppUserInfoService.apply(request.getUserId(), request.getUsername());
         final PostEntity getPostInformation = getPostInformationService.apply(request.getPostId());
 
         // Check if both user and post information are not null.
@@ -238,7 +237,7 @@ public class PostServiceImpl implements PostService {
     @Override
     public UserPostResponse userPosts(GetUserPostRequest request) {
         // Retrieve user information from the social app using the provided user identifier and username.
-        final SocialUserEntity socialUserEntity = getSocialAppUserInfoService.apply(request.getId(), request.getUsername());
+        final SocialUserEntity socialUserEntity = getSocialAppUserInfoService.apply(request.getUserId(), request.getUsername());
 
         // Check if the user information is found.
         if (Objects.nonNull(socialUserEntity)) {
@@ -271,7 +270,7 @@ public class PostServiceImpl implements PostService {
     @Override
     public SelectedPostResponse selectedPost(SelectedPostRequest request) {
         // Retrieve user information from the social app using the provided user identifier and username.
-        final SocialUserEntity socialUserEntity = getSocialAppUserInfoService.apply(request.getId(), request.getUsername());
+        final SocialUserEntity socialUserEntity = getSocialAppUserInfoService.apply(request.getUserId(), request.getUsername());
 
         // Retrieve post information based on the provided post identifier.
         final PostEntity getPostInformation = getPostInformationService.apply(request.getPostId());

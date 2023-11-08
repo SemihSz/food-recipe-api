@@ -28,7 +28,7 @@ public class RecipeServiceImpl implements RecipeService {
     public CreateRecipeResponse createNewRecipe(CreateRecipeRequest request) {
 
         // Retrieve the social user information based on the user ID and username from the request
-        final SocialUserEntity socialUserEntity = getSocialAppUserInfoService.apply(request.getId(), request.getUsername());
+        final SocialUserEntity socialUserEntity = getSocialAppUserInfoService.apply(request.getUserId(), request.getUsername());
         final CreateRecipeInput input = CreateRecipeInputMapper.INSTANCE.convert(request, socialUserEntity);
 
         return createNewRecipeService.apply(input);

@@ -2,6 +2,7 @@ package com.food.recipe.api.controller;
 
 import com.food.recipe.api.model.RestResponse;
 import com.food.recipe.api.model.document.Base64Files;
+import com.food.recipe.api.model.request.like.LikedBaseRequest;
 import com.food.recipe.api.model.request.post.GetUserPostRequest;
 import com.food.recipe.api.model.request.post.PostRequest;
 import com.food.recipe.api.model.request.post.SelectedPostRequest;
@@ -61,5 +62,12 @@ public class PostController {
     public ResponseEntity<RestResponse<SelectedPostResponse>> selectedPost(@RequestBody SelectedPostRequest request) {
 
         return ResponseEntity.ok(new RestResponse<>(HttpStatus.OK, postService.selectedPost(request)));
+    }
+
+    @GetMapping("/like-post")
+    public ResponseEntity likePost(@RequestBody LikedBaseRequest request) {
+
+        postService.likes(request);
+        return ResponseEntity.ok().build();
     }
 }

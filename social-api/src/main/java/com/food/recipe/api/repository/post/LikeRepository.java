@@ -1,6 +1,7 @@
 package com.food.recipe.api.repository.post;
 
 import com.food.recipe.api.entity.post.LikeEntity;
+import com.food.recipe.api.entity.post.PostEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -23,4 +24,6 @@ public interface LikeRepository extends JpaRepository<LikeEntity, Long> {
 //
 //    @Query("SELECT COUNT(l.id) from Like l where l.post.id = :postId")
 //    long countByPostId(@Param("postId") Long postId);
+
+    long countByPost(PostEntity post);
 }

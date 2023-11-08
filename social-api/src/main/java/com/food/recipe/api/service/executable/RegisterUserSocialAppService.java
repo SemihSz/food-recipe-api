@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.Locale;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -33,12 +32,12 @@ public class RegisterUserSocialAppService implements SimpleTask<RegisterUserSoci
     @Override
     public Boolean apply(RegisterUserSocialAppRequest request) {
 
-        final Optional<SocialUserEntity> socialUserEntity = socialUserRepository.findById(request.getId());
+        final Optional<SocialUserEntity> socialUserEntity = socialUserRepository.findById(request.getUserId());
 
         if (socialUserEntity.isEmpty()) {
             final UUID randomUUID = UUID.randomUUID();
             final SocialUserEntity createNewUser = SocialUserEntity.builder()
-                    .id(request.getId())
+                    .id(request.getUserId())
                     .uuid(randomUUID.toString())
                     .createdAt(LocalDateTime.now())
                     .updatedAt(LocalDateTime.now())

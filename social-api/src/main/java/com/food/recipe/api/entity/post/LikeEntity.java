@@ -37,7 +37,4 @@ public class LikeEntity {
     @JoinColumn(name = "social_user_entity.id", nullable = false)
     private SocialUserEntity user;
 
-    @ManyToOne(fetch = FetchType.EAGER,cascade=CascadeType.ALL)
-    @JoinColumn(name = "recipe_entity.id", nullable = false)
-    private RecipeEntity recipe;
 }

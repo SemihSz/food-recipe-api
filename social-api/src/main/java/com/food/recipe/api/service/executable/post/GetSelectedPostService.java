@@ -11,6 +11,7 @@ import com.food.recipe.api.model.input.post.SelectedPostInput;
 import com.food.recipe.api.model.properties.ProjectInfoModel;
 import com.food.recipe.api.model.response.post.PostImage;
 import com.food.recipe.api.model.response.post.SelectedPostResponse;
+import com.food.recipe.api.repository.post.LikeRepository;
 import com.food.recipe.api.repository.post.SavedPostRepository;
 import com.food.recipe.api.repository.post.comment.CommentsRepository;
 import com.food.recipe.api.service.client.ServiceRestClient;
@@ -26,6 +27,7 @@ import java.util.*;
 @Service
 @RequiredArgsConstructor
 public class GetSelectedPostService implements SimpleTask<SelectedPostInput, SelectedPostResponse> {
+
     private final CommentsRepository commentsRepository;
 
     private final GetProjectInfoService getProjectInfoService;
@@ -33,6 +35,8 @@ public class GetSelectedPostService implements SimpleTask<SelectedPostInput, Sel
     private final SavedPostRepository savedPostRepository;
 
     private final ServiceRestClient<DocumentInfoResponse> serviceRestClient;
+
+    private final LikeRepository likeRepository;
 
     @Override
     public SelectedPostResponse apply(SelectedPostInput input) {
@@ -62,12 +66,14 @@ public class GetSelectedPostService implements SimpleTask<SelectedPostInput, Sel
             }
 
             long commentCount = commentsRepository.countByPost(postEntity.getPost());
+            long likeCounts = likeRepository.countByPost(postEntity.getPost());
 
             return SelectedPostResponse.builder()
                     .id(postEntity.getPost().getId())
                     .imageResponse(postImageList)
                     .description(postEntity.getPost().getDescription())
                     .commentCounts(commentCount)
+                    .likeCounts(likeCounts)
                     .build();
         }
 

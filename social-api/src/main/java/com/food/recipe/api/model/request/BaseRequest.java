@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 public class BaseRequest {
 
-    private Long id;
+    private Long userId;
 
     private String username;
 
