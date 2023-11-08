@@ -1,0 +1,52 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+  application:
+    name: COUNTRY-API
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/countries_api
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: pass
+    hikari:
+      auto_commit: false
+  jackson:
+    deserialization:
+      FAIL_ON_IGNORED_PROPERTIES: false
+    serialization:
+      INDENT_OUTPUT: false
+      WRITE_DATES_AS_TIMESTAMPS: false
+      WRITE_BIGDECIMAL_AS_PLAIN: true
+  cloud:
+    stream:
+      binder:
+        brokers: localhost:9092
+    compatibility-verifier:
+      enabled: false
+logging:
+  level.*:
+    org.springframework.web.client.RestTemplate: INFO
+    com.com.countries_api: debug
+    org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor: TRACE
+
+  file:
+    name: logs/countries-api.log
+
+server:
+  port: 9972
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka

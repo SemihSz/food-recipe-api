@@ -1,0 +1,241 @@
+2023-10-22 01:15:58,987 INFO o.s.b.StartupInfoLogger [main] Starting CountriesApiApplication using Java 19.0.2 with PID 18256 (C:\Users\ibrah\IdeaProjects\countries_api\target\classes started by ibrah in C:\Users\ibrah\IdeaProjects\countries_api)
+2023-10-22 01:15:58,991 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-22 01:15:59,558 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-22 01:15:59,618 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2023-10-22 01:16:00,001 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 9972 (http)
+2023-10-22 01:16:00,008 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-9972"]
+2023-10-22 01:16:00,010 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-10-22 01:16:00,010 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-10-22 01:16:00,082 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-10-22 01:16:00,083 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1050 ms
+2023-10-22 01:16:00,184 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-22 01:16:00,235 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-10-22 01:16:00,237 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-10-22 01:16:00,458 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-22 01:16:00,478 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-10-22 01:16:00,604 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@12214f2f
+2023-10-22 01:16:00,605 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-10-22 01:16:00,643 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-10-22 01:16:01,215 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-10-22 01:16:01,229 INFO o.h.r.t.b.j.i.DdlTransactionIsolatorNonJtaImpl [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@54ed249f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2023-10-22 01:16:01,292 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-22 01:16:01,463 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-22 01:16:01,832 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-9972"]
+2023-10-22 01:16:01,844 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 9972 (http) with context path ''
+2023-10-22 01:16:01,849 INFO o.s.b.StartupInfoLogger [main] Started CountriesApiApplication in 3.237 seconds (process running for 4.318)
+2023-10-22 01:21:19,967 INFO o.a.j.l.DirectJDKLog [http-nio-9972-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-22 01:21:19,968 INFO o.s.w.s.FrameworkServlet [http-nio-9972-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-10-22 01:21:19,968 INFO o.s.w.s.FrameworkServlet [http-nio-9972-exec-1] Completed initialization in 0 ms
+2023-10-22 01:21:20,025 ERROR o.a.j.l.DirectJDKLog [http-nio-9972-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.google.gson.JsonSyntaxException: java.lang.NumberFormatException: Expected an int but was 4.48 at line 84560 column 21 path $[10569].altitude] with root cause
+java.lang.NumberFormatException: Expected an int but was 4.48 at line 84560 column 21 path $[10569].altitude
+	at com.google.gson.stream.JsonReader.nextInt(JsonReader.java:1218)
+	at com.google.gson.internal.bind.TypeAdapters$7.read(TypeAdapters.java:249)
+	at com.google.gson.internal.bind.TypeAdapters$7.read(TypeAdapters.java:241)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.readIntoField(ReflectiveTypeAdapterFactory.java:212)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$FieldReflectionAdapter.readField(ReflectiveTypeAdapterFactory.java:433)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:393)
+	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.read(TypeAdapterRuntimeTypeWrapper.java:40)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter.read(CollectionTypeAdapterFactory.java:82)
+	at com.google.gson.internal.bind.CollectionTypeAdapterFactory$Adapter.read(CollectionTypeAdapterFactory.java:61)
+	at com.google.gson.Gson.fromJson(Gson.java:1227)
+	at com.google.gson.Gson.fromJson(Gson.java:1137)
+	at com.google.gson.Gson.fromJson(Gson.java:1107)
+	at com.countries_api.service.executable.SaveCitiesService.get(SaveCitiesService.java:32)
+	at com.countries_api.service.impl.CityServiceImpl.saveCities(CityServiceImpl.java:26)
+	at com.countries_api.controller.CitiesController.saveCitiesJson(CitiesController.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-10-22 01:24:01,336 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-22 01:24:01,338 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-10-22 01:24:01,339 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-10-22 01:24:06,132 INFO o.s.b.StartupInfoLogger [main] Starting CountriesApiApplication using Java 19.0.2 with PID 32052 (C:\Users\ibrah\IdeaProjects\countries_api\target\classes started by ibrah in C:\Users\ibrah\IdeaProjects\countries_api)
+2023-10-22 01:24:06,134 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-22 01:24:06,483 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-22 01:24:06,520 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+2023-10-22 01:24:06,819 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 9972 (http)
+2023-10-22 01:24:06,823 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-9972"]
+2023-10-22 01:24:06,825 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-10-22 01:24:06,825 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-10-22 01:24:06,877 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-10-22 01:24:06,878 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 719 ms
+2023-10-22 01:24:06,961 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-22 01:24:06,996 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-10-22 01:24:06,997 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-10-22 01:24:07,183 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-22 01:24:07,200 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-10-22 01:24:07,309 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2e929182
+2023-10-22 01:24:07,310 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-10-22 01:24:07,330 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-10-22 01:24:07,840 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-10-22 01:24:07,855 INFO o.h.r.t.b.j.i.DdlTransactionIsolatorNonJtaImpl [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@165824f5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2023-10-22 01:24:07,887 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-22 01:24:08,053 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-22 01:24:08,413 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-9972"]
+2023-10-22 01:24:08,425 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 9972 (http) with context path ''
+2023-10-22 01:24:08,430 INFO o.s.b.StartupInfoLogger [main] Started CountriesApiApplication in 2.556 seconds (process running for 3.236)
+2023-10-22 01:24:17,667 INFO o.a.j.l.DirectJDKLog [http-nio-9972-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-22 01:24:17,668 INFO o.s.w.s.FrameworkServlet [http-nio-9972-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-10-22 01:24:17,670 INFO o.s.w.s.FrameworkServlet [http-nio-9972-exec-1] Completed initialization in 2 ms
+2023-10-22 01:24:17,739 ERROR o.a.j.l.DirectJDKLog [http-nio-9972-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed: java.lang.NoSuchMethodError: 'int com.countries_api.model.city.CityModel.getAltitude()'] with root cause
+java.lang.NoSuchMethodError: 'int com.countries_api.model.city.CityModel.getAltitude()'
+	at com.countries_api.mapper.cities.CitiesEntityMapperImpl.convert(CitiesEntityMapperImpl.java:30)
+	at com.countries_api.mapper.cities.CitiesEntityMapperImpl.convert(CitiesEntityMapperImpl.java:43)
+	at com.countries_api.service.executable.SaveCitiesService.get(SaveCitiesService.java:33)
+	at com.countries_api.service.impl.CityServiceImpl.saveCities(CityServiceImpl.java:26)
+	at com.countries_api.controller.CitiesController.saveCitiesJson(CitiesController.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-10-22 01:24:52,371 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-22 01:24:52,373 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-10-22 01:24:52,374 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-10-22 01:25:08,803 INFO o.s.b.StartupInfoLogger [main] Starting CountriesApiApplication using Java 19.0.2 with PID 33920 (C:\Users\ibrah\IdeaProjects\countries_api\target\classes started by ibrah in C:\Users\ibrah\IdeaProjects\countries_api)
+2023-10-22 01:25:08,805 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-22 01:25:09,333 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-22 01:25:09,391 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+2023-10-22 01:25:09,746 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 9972 (http)
+2023-10-22 01:25:09,752 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-9972"]
+2023-10-22 01:25:09,753 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-10-22 01:25:09,753 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-10-22 01:25:09,815 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-10-22 01:25:09,816 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 980 ms
+2023-10-22 01:25:09,905 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-22 01:25:09,939 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-10-22 01:25:09,940 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-10-22 01:25:10,116 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-22 01:25:10,133 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-10-22 01:25:10,240 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7de6549d
+2023-10-22 01:25:10,241 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-10-22 01:25:10,262 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-10-22 01:25:10,784 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-10-22 01:25:10,798 INFO o.h.r.t.b.j.i.DdlTransactionIsolatorNonJtaImpl [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@64e3bc2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2023-10-22 01:25:10,821 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-22 01:25:10,985 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-22 01:25:11,345 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-9972"]
+2023-10-22 01:25:11,358 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 9972 (http) with context path ''
+2023-10-22 01:25:11,362 INFO o.s.b.StartupInfoLogger [main] Started CountriesApiApplication in 2.94 seconds (process running for 3.643)
+2023-10-22 01:25:25,634 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-22 01:25:25,635 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-10-22 01:25:25,638 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-10-22 01:25:28,232 INFO o.s.b.StartupInfoLogger [main] Starting CountriesApiApplication using Java 19.0.2 with PID 25812 (C:\Users\ibrah\IdeaProjects\countries_api\target\classes started by ibrah in C:\Users\ibrah\IdeaProjects\countries_api)
+2023-10-22 01:25:28,233 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-22 01:25:28,585 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-22 01:25:28,622 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2023-10-22 01:25:28,936 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 9972 (http)
+2023-10-22 01:25:28,941 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-9972"]
+2023-10-22 01:25:28,942 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-10-22 01:25:28,942 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-10-22 01:25:28,996 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-10-22 01:25:28,996 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 736 ms
+2023-10-22 01:25:29,081 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-22 01:25:29,113 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-10-22 01:25:29,115 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-10-22 01:25:29,282 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-22 01:25:29,300 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-10-22 01:25:29,402 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@12214f2f
+2023-10-22 01:25:29,403 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-10-22 01:25:29,423 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-10-22 01:25:29,927 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-10-22 01:25:29,940 INFO o.h.r.t.b.j.i.DdlTransactionIsolatorNonJtaImpl [main] HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7bad18f5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2023-10-22 01:25:29,972 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-22 01:25:30,138 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-22 01:25:30,480 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-9972"]
+2023-10-22 01:25:30,492 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 9972 (http) with context path ''
+2023-10-22 01:25:30,496 INFO o.s.b.StartupInfoLogger [main] Started CountriesApiApplication in 2.541 seconds (process running for 3.12)
+2023-10-22 01:25:35,947 INFO o.a.j.l.DirectJDKLog [http-nio-9972-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-22 01:25:35,947 INFO o.s.w.s.FrameworkServlet [http-nio-9972-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-10-22 01:25:35,948 INFO o.s.w.s.FrameworkServlet [http-nio-9972-exec-1] Completed initialization in 1 ms
+2023-10-22 01:27:24,660 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-22 01:27:24,662 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-10-22 01:27:24,663 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
