@@ -1,4 +1,4 @@
-package com.food.recipe.api.service;
+package com.food.recipe.api.service.impl;
 
 import com.food.recipe.api.entity.post.LikeEntity;
 import com.food.recipe.api.entity.post.PostEntity;
@@ -6,6 +6,7 @@ import com.food.recipe.api.model.input.like.GetUserLikesInput;
 import com.food.recipe.api.model.request.like.LikedBaseRequest;
 import com.food.recipe.api.model.response.like.ShowLikeResponse;
 import com.food.recipe.api.model.response.like.ShowLikeUserInfo;
+import com.food.recipe.api.service.ShowLikeService;
 import com.food.recipe.api.service.executable.like.GetUserLikeInfoService;
 import com.food.recipe.api.service.executable.post.GetPostInformationService;
 import lombok.RequiredArgsConstructor;
