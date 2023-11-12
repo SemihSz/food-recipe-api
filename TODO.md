@@ -12,6 +12,8 @@
 * logger base64 file basılıyor onu loglardan kaldır
 * logstash ve graylog gibi şeyler eklenebilir,
 * docker image
+* Follower kısmını yap
+* 
 
 
 ### Başka TODO Kısmı
