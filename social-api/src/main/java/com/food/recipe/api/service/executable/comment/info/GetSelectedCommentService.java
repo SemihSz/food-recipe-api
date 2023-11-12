@@ -9,6 +9,7 @@ import com.food.recipe.api.model.comment.ReplyCommentList;
 import com.food.recipe.api.model.input.comment.ReplyCommentInput;
 import com.food.recipe.api.model.request.comment.PostCommentRequest;
 import com.food.recipe.api.repository.post.comment.CommentsRepository;
+import com.food.recipe.api.repository.post.comment.like.CommentLikedEntityRepository;
 import com.food.recipe.api.service.executable.post.GetPostInformationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -30,6 +31,8 @@ public class GetSelectedCommentService implements SimpleTask<PostCommentRequest,
 
     private final GetReplyCommentsService getReplyCommentsService;
 
+    private final CommentLikedEntityRepository commentLikedEntityRepository;
+
     @Override
     public List<CommentList> apply(PostCommentRequest postCommentRequest) {
 
@@ -49,6 +52,8 @@ public class GetSelectedCommentService implements SimpleTask<PostCommentRequest,
                         .post(getPostInformation)
                         .build();
                     final List<ReplyCommentList> replyCommentLists = getReplyCommentsService.apply(replyCommentInput);
+
+                    long likeCount = commentLikedEntityRepository.countByComment(comment);
                     final CommentList item = CommentList.builder()
                             .commentId(comment.getId())
                             .postId(postId)
@@ -60,9 +65,11 @@ public class GetSelectedCommentService implements SimpleTask<PostCommentRequest,
                             .updatedAt(comment.getUpdateAt())
                             .commentDescription(comment.getBody())
                             .replyComments(replyCommentLists) // All comment check beloved reply comments.
+                            .likeCount(likeCount)
                             .build();
 
                     commentLists.add(item);
+
                 }
             }
 

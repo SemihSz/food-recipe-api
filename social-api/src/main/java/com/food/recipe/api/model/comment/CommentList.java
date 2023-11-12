@@ -41,4 +41,6 @@ public class CommentList implements Serializable {
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime updatedAt;
+
+    private long likeCount;
 }

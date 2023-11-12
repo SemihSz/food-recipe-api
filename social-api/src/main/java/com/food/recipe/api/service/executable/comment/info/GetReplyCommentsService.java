@@ -1,12 +1,12 @@
 package com.food.recipe.api.service.executable.comment.info;
 
 import com.food.recipe.api.SimpleTask;
-import com.food.recipe.api.entity.post.comment.CommentsEntity;
 import com.food.recipe.api.entity.post.comment.ReplyCommentEntity;
 import com.food.recipe.api.entity.user.SocialUserEntity;
 import com.food.recipe.api.model.comment.ReplyCommentList;
 import com.food.recipe.api.model.input.comment.ReplyCommentInput;
 import com.food.recipe.api.repository.post.comment.ReplyCommentEntityRepository;
+import com.food.recipe.api.repository.post.comment.like.ReplyCommentLikedEntityRepository;
 import com.food.recipe.api.service.executable.user.GetUserInfoWithIdService;
 import java.util.ArrayList;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +26,8 @@ public class GetReplyCommentsService implements SimpleTask<ReplyCommentInput, Li
 
     private final GetReplyCommentInformationService getReplyCommentInformationService;
 
+    private final ReplyCommentLikedEntityRepository replyCommentLikedEntityRepository;
+
     @Override
     public List<ReplyCommentList> apply(ReplyCommentInput replyCommentInput) {
 
@@ -39,6 +41,8 @@ public class GetReplyCommentsService implements SimpleTask<ReplyCommentInput, Li
             final ReplyCommentEntity commentInformation = getReplyCommentInformationService.apply(entity.getId());
             final SocialUserEntity socialUser = getUserInfoWithIdService.apply(entity.getUser().getId());
 
+            final long likeCount = replyCommentLikedEntityRepository.countByReplyComment(entity);
+
             final ReplyCommentList replyComment = ReplyCommentList.builder()
                 .replyCommentsId(entity.getId())
                 .commentDescription(commentInformation.getBody())
@@ -47,6 +51,7 @@ public class GetReplyCommentsService implements SimpleTask<ReplyCommentInput, Li
                 .name(socialUser.getName())
                 .surname(socialUser.getSurname())
                 .createdAt(entity.getCreatedAt())
+                .likeCount(likeCount)
                 .updatedAt(entity.getUpdatedAt()).username(socialUser.getUsername())
                 .build();
 

@@ -35,4 +35,6 @@ public class ReplyCommentList implements Serializable {
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime updatedAt;
+
+    private long likeCount;
 }
