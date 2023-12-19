@@ -9,17 +9,17 @@ spring:
   application:
     name: COUNTRY-API
   jpa:
-    show-sql: false
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
     hibernate:
       ddl-auto: update
+    generate-ddl: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/countries_api
-    driverClassName: org.postgresql.Driver
-    username: postgres
+    url: jdbc:mysql://localhost:3306/countries_api
+    username: root
     password: pass
     hikari:
       auto_commit: false
+      driver-class-name: com.mysql.cj.jdbc.Driver
   jackson:
     deserialization:
       FAIL_ON_IGNORED_PROPERTIES: false
