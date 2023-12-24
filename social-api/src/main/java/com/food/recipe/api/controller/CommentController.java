@@ -12,6 +12,9 @@ import com.food.recipe.api.model.response.comment.CommentResponse;
 import com.food.recipe.api.model.response.comment.SelectedPostCommentsResponse;
 import com.food.recipe.api.service.CommentService;
 import java.util.List;
+
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,6 +36,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CommentController {
 
     private final CommentService commentService;
+
 
     @PostMapping("/add")
     public ResponseEntity<RestResponse<CommentResponse>> addComment(@RequestBody CreateCommentRequest createCommentRequest) {

@@ -36,6 +36,9 @@ spring:
     compatibility-verifier:
       enabled: false
 
+  sleuth:
+    sampler:
+      probability: 1.0
   zipkin:
     baseUrl: http://127.0.0.1:9411/
 
@@ -58,6 +61,11 @@ logging:
     name: logs/social-api-app.log
 
 management:
+  tracing:
+    sampling:
+      probability: 1.0
+    propagation:
+      type: b3
   endpoints:
     web:
       exposure:
@@ -67,6 +75,14 @@ server:
   port: 9978
   servlet:
     context-path: /social
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui-custom.html
+    operations-sorter: method
+  packages-to-scan: com.food.recipe.api.controller
 
 project-info:
   packages:

@@ -69,7 +69,8 @@ public class AuthConfig {
                                 //.requestMatchers(AUTH_LIST).authenticated()
                                 .requestMatchers("/auth/**").permitAll()
                                 .requestMatchers("/h2-console/**").permitAll()
-                                .requestMatchers("/v3/api-docs/**","/swagger-ui/**").permitAll()
+                                .requestMatchers("/v3/api-docs/**","/swagger-ui/**", "/swagger-ui-custom.html/**").permitAll()
+                                .requestMatchers("/**").permitAll()
                                 .anyRequest().authenticated()
                 ).httpBasic(Customizer.withDefaults());
 

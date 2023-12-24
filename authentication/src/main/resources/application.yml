@@ -39,6 +39,11 @@ server:
     context-path: /users
 
 management:
+  tracing:
+    sampling:
+      probability: 1.0
+    propagation:
+      type: b3
   health:
     livenessState.enabled: true
     readinessState.enabled: true
@@ -47,6 +52,11 @@ management:
 spring:
 
   application.name: authentication
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    baseUrl: http://127.0.0.1:9411/
   jpa:
     show-sql: true
     hibernate:
@@ -59,13 +69,13 @@ spring:
     hikari:
       auto_commit: false
       driver-class-name: com.mysql.cj.jdbc.Driver
-  jackson:
-    deserialization:
-      FAIL_ON_IGNORED_PROPERTIES: false
-    serialization:
-      INDENT_OUTPUT: false
-      WRITE_DATES_AS_TIMESTAMPS: false
-      WRITE_BIGDECIMAL_AS_PLAIN: true
+#  jackson:
+#    deserialization:
+#      FAIL_ON_IGNORED_PROPERTIES: false
+#    serialization:
+#      INDENT_OUTPUT: false
+#      WRITE_DATES_AS_TIMESTAMPS: false
+#      WRITE_BIGDECIMAL_AS_PLAIN: true
   cloud:
     stream:
       binder:
@@ -73,11 +83,18 @@ spring:
     compatibility-verifier:
       enabled: false
 
-  zipkin:
-    baseUrl: http://127.0.0.1:9411/
+#  file:
+#    name: logs/authentication-app.log
 
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui-custom.html
+    operations-sorter: method
+

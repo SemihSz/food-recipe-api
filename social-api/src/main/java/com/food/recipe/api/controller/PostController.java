@@ -52,19 +52,19 @@ public class PostController {
         return ResponseEntity.ok(new RestResponse<>(HttpStatus.OK, postService.createPostViaFile(file, username, id)));
     }
 
-    @GetMapping( "/list")
+    @PostMapping( "/list")
     public ResponseEntity<RestResponse<UserPostResponse>> userPostList(@RequestBody GetUserPostRequest request) {
 
         return ResponseEntity.ok(new RestResponse<>(HttpStatus.OK, postService.userPosts(request)));
     }
 
-    @GetMapping("/selected-post")
+    @PostMapping("/selected-post")
     public ResponseEntity<RestResponse<SelectedPostResponse>> selectedPost(@RequestBody SelectedPostRequest request) {
 
         return ResponseEntity.ok(new RestResponse<>(HttpStatus.OK, postService.selectedPost(request)));
     }
 
-    @GetMapping("/like-post")
+    @PostMapping("/like-post")
     public ResponseEntity likePost(@RequestBody LikedBaseRequest request) {
 
         postService.likes(request);
