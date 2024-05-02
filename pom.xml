@@ -33,7 +33,6 @@
         <module>social-api</module>
         <module>document-save</module>
         <module>countries_api</module>
-        <module>config-server</module>
     </modules>
 
 
